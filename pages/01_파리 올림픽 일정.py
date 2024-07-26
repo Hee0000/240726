@@ -1,0 +1,45 @@
+import streamlit as st
+
+st.title('희원의 파리 올림픽 서비스 만들기')
+
+name = st.text_input('이름을 입력해주세요 : ')
+
+sports = st.selectbox('좋아하는 파리 올림픽 종목을 선택해주세요 : ', 
+                      ['육상', '수영', '체조', '유도', '테니스', '배드민턴', '농구', '복싱', '카누', '사이클', 
+                       '다이빙', '승마', '펜싱', '축구', '골프', '핸드볼', '하키', '조정', '럭비', '요트', 
+                       '사격', '스케이트보딩', '서핑', '탁구', '태권도', '트라이애슬론', '배구', '역도', '레슬링'])
+
+if st.button('종목 정보 보기'):
+    st.write(name + '님! 당신이 좋아하는 종목은 ' + sports + '이군요!')
+
+    # 종목의 픽토그램과 일정을 보여줍니다.
+    pictogram_url = ''
+    schedule = ''
+
+    if sports == '육상':
+        pictogram_url = 'https://example.com/athletics_pictogram.png'
+        schedule = '2024년 7월 26일 - 2024년 8월 11일'
+    elif sports == '수영':
+        pictogram_url = 'https://example.com/swimming_pictogram.png'
+        schedule = '2024년 7월 27일 - 2024년 8월 3일'
+    elif sports == '체조':
+        pictogram_url = 'https://example.com/gymnastics_pictogram.png'
+        schedule = '2024년 7월 27일 - 2024년 8월 5일'
+    elif sports == '유도':
+        pictogram_url = 'https://example.com/judo_pictogram.png'
+        schedule = '2024년 7월 27일 - 2024년 8월 3일'
+    elif sports == '테니스':
+        pictogram_url = 'https://example.com/tennis_pictogram.png'
+        schedule = '2024년 7월 27일 - 2024년 8월 4일'
+    # 다른 종목들에 대한 정보도 추가하세요
+    # 예:
+    # elif sports == '배드민턴':
+    #     pictogram_url = 'https://example.com/badminton_pictogram.png'
+    #     schedule = '2024년 7월 28일 - 2024년 8월 5일'
+
+    if pictogram_url:
+        st.image(pictogram_url)
+    if schedule:
+        st.write(f'{sports} 경기 일정: {schedule}')
+
+# 실제 이미지 URL을 사용해야 합니다. 위의 예시는 예제 URL입니다.
