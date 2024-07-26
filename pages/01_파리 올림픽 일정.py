@@ -14,7 +14,7 @@ if st.button('종목 정보 보기'):
 
     # 종목의 픽토그램과 일정을 보여줍니다.
     pictogram_url = 'https://olympics.com/ko/paris-2024/the-games/the-brand/pictograms'
-    schedule_url = 'https://olympics.com/ko/paris-2024/schedule/26-july'
+    schedule_url = 'https://olympics.com/ko/paris-2024/schedule'
 
     if sports == '육상':
         st.image(pictogram_url)
