@@ -4,13 +4,13 @@ st.title('파리 올림픽 일정표 확인하기')
 
 name = st.text_input('이름을 입력해주세요 : ')
 
-sports = st.selectbox('좋아하는 파리 올림픽 종목을 선택해주세요 : ', 
+sports = st.selectbox('확인하고 싶은 파리 올림픽 종목을 선택해주세요 : ', 
                       ['육상', '수영', '체조', '유도', '테니스', '배드민턴', '농구', '복싱', '카누', '사이클', 
                        '다이빙', '승마', '펜싱', '축구', '골프', '핸드볼', '하키', '조정', '럭비', '요트', 
                        '사격', '스케이트보딩', '서핑', '탁구', '태권도', '트라이애슬론', '배구', '역도', '레슬링'])
 
 if st.button('종목 정보 보기'):
-    st.write(name + '님! 당신이 좋아하는 종목은 ' + sports + '이군요!')
+    st.write(name + '님! ' + sports + '의 일정은 다음과 같습니다.')
 
     # 종목의 픽토그램과 일정을 보여줍니다.
     pictogram_url = 'https://olympics.com/ko/paris-2024/the-games/the-brand/pictograms'
