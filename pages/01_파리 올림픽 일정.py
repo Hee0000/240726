@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title('희원의 파리 올림픽 서비스 만들기')
+st.title('파리 올림픽 일정표 확인하기')
 
 name = st.text_input('이름을 입력해주세요 : ')
 
@@ -13,33 +13,28 @@ if st.button('종목 정보 보기'):
     st.write(name + '님! 당신이 좋아하는 종목은 ' + sports + '이군요!')
 
     # 종목의 픽토그램과 일정을 보여줍니다.
-    pictogram_url = ''
-    schedule = ''
+    pictogram_url = 'https://olympics.com/ko/paris-2024/the-games/the-brand/pictograms'
+    schedule_url = 'https://olympics.com/ko/paris-2024/schedule/26-july'
 
     if sports == '육상':
-        pictogram_url = 'https://example.com/athletics_pictogram.png'
-        schedule = '2024년 7월 26일 - 2024년 8월 11일'
+        st.image(pictogram_url)
+        st.write(f'[육상 경기 일정 보기]({schedule_url})')
     elif sports == '수영':
-        pictogram_url = 'https://example.com/swimming_pictogram.png'
-        schedule = '2024년 7월 27일 - 2024년 8월 3일'
+        st.image(pictogram_url)
+        st.write(f'[수영 경기 일정 보기]({schedule_url})')
     elif sports == '체조':
-        pictogram_url = 'https://example.com/gymnastics_pictogram.png'
-        schedule = '2024년 7월 27일 - 2024년 8월 5일'
+        st.image(pictogram_url)
+        st.write(f'[체조 경기 일정 보기]({schedule_url})')
     elif sports == '유도':
-        pictogram_url = 'https://example.com/judo_pictogram.png'
-        schedule = '2024년 7월 27일 - 2024년 8월 3일'
+        st.image(pictogram_url)
+        st.write(f'[유도 경기 일정 보기]({schedule_url})')
     elif sports == '테니스':
-        pictogram_url = 'https://example.com/tennis_pictogram.png'
-        schedule = '2024년 7월 27일 - 2024년 8월 4일'
+        st.image(pictogram_url)
+        st.write(f'[테니스 경기 일정 보기]({schedule_url})')
     # 다른 종목들에 대한 정보도 추가하세요
     # 예:
     # elif sports == '배드민턴':
-    #     pictogram_url = 'https://example.com/badminton_pictogram.png'
-    #     schedule = '2024년 7월 28일 - 2024년 8월 5일'
-
-    if pictogram_url:
-        st.image(pictogram_url)
-    if schedule:
-        st.write(f'{sports} 경기 일정: {schedule}')
+    #     st.image(pictogram_url)
+    #     st.write(f'[배드민턴 경기 일정 보기]({schedule_url})')
 
 # 실제 이미지 URL을 사용해야 합니다. 위의 예시는 예제 URL입니다.
